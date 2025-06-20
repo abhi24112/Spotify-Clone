@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.left{
+    width: 25%;
+    padding: 10px;
+}
+.right{
+    width: 75%;
+    margin: 3px;
+}
+
+.home{
+    padding: 10px;
+}
+
+.home ul li{
+    list-style:none;
+    width: 14px;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.library{
+    min-height: 80vh;
+    position: relative;
+}
+
+.heading{
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.heading img{
+    width: 30px;
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: grey;
+}
+
+.right{
+    margin: 15px;
+}
+
+.header{
+    display: flex;
+    background-color: #282828;
+    justify-content: space-between;
+    padding: 11px;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.spotifyPlaylist{
+    color: white;
+    padding: 16px;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    width: 180px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    object-fit:contain ;
+}
+.card h2{
+    padding: 5px;
+    font-size: 20px;
+}
+.card p{
+    padding: 5px;
+    font-size: 13px;
+    color: gray;
+}
+.card:hover{
+    background-color:#282828;
+}
+.card button{
+    background-color: #1ed760;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardPlay img{
+    width: 100%;
+    padding: 9px;
+}
+.play{
+    position: absolute;
+    top: 130px;
+    left: 130px;
+    opacity: 0;
+}
+.card:hover .play{
+    animation: play 0.4s ease-in-out forwards;
+}
+
+@keyframes play {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
