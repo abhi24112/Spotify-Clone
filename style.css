@@ -85,6 +85,9 @@ body {
 .cardContainer{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
 
 .card {
@@ -141,4 +144,46 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+/* Scroll bar css */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  background-color: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5e5e5e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8f8f8f;
+}
+  
+.buttons{
+    margin-right: 10px;
+}
+.buttons span{
+    margin: 20px;
+}
+.signin-btn{
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.login-btn{
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 15px;
 }
