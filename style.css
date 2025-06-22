@@ -188,3 +188,20 @@ body {
 .signin-btn:hover, .login-btn:hover{
     transform: scale(1.1);
 }
+
+.right{
+    position: relative;
+}
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: #1ed760;
+    width: 100%;
+    padding: 10px;
+}
+.song-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
