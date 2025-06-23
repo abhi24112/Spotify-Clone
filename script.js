@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 
 // getting songs from the directory
 async function getSongs() {
-  let a = await fetch("http://127.0.0.1:5500/songs/");
+  let a = await fetch("https://v81h63rq-5500.inc1.devtunnels.ms/songs/");
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -75,11 +75,13 @@ async function main() {
     // songUL.innerHTML = songUL.innerHTML + `<li></li>`
     songUL.innerHTML =
       songUL.innerHTML +
-       `<li>
+      `<li>
             <img class="invert" src="src/music.svg" alt="">
-            <div class="info">
-              <div>${song_name}</div>
-              <div class="artist-name">Abhishek</div>
+            <div class="info-container">
+              <div class="info">
+                <div>${song_name}</div>
+                <div class="artist-name">Abhishek</div>
+              </div>
             </div>
             <div class="playnow">
               <span>Play Now</span>
@@ -114,6 +116,23 @@ async function main() {
     let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
     document.querySelector(".circle").style.left = percent + "%";
     currentSong.currentTime = (currentSong.duration * percent) / 100;
+  });
+
+  // hamburger work
+  document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector('.left').style.left = 0
+  })
+  
+  document.querySelector(".hamburger1").addEventListener("click",()=>{
+    document.querySelector('.left').style.left = `-100%`
+  })
+  // click outside to remove the left container.
+  document.addEventListener("click", (e) => {
+    const left = document.querySelector(".left");
+    const hamburger = document.querySelector(".hamburger");
+    if (!left.contains(e.target) && !hamburger.contains(e.target)) {
+      left.style.left = `-100%`;
+    }
   });
 
 
