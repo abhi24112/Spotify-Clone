@@ -15,7 +15,7 @@
           <div class="logo">
             <img class="invert" src="./src/logo.svg" alt="logo" />
             <div class="hamburger1">
-                <img class="invert" src="src/hamburger.svg" alt="">
+              <img class="invert" src="src/hamburger.svg" alt="" />
             </div>
           </div>
           <ul>
@@ -67,12 +67,11 @@
       </div>
 
       <div class="right bg-gray rounded">
-
         <!-- header -->
         <div class="header">
           <div class="nav">
             <div class="hamburger">
-                <img class="invert" src="src/hamburger.svg" alt="">
+              <img class="invert" src="src/hamburger.svg" alt="" />
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +107,9 @@
             </svg>
           </div>
           <div class="buttons">
-            <button href="https://www.google.com" class="signin-btn"><span>Sign in</span></button>
+            <button href="https://www.google.com" class="signin-btn">
+              <span>Sign in</span>
+            </button>
             <button class="login-btn"><span>Log in</span></button>
           </div>
         </div>
@@ -194,7 +195,15 @@
                 alt=""
               />
             </div>
-            <div class="songtime">00:00 / 00:00</div>
+            <div class="timevolume">
+              <div class="volume">
+                <img width="25" class="invert" src="src/volume.svg" alt="" />
+                <div class="range">
+                  <input type="range" name="volume" id="" />
+                </div>
+              </div>
+              <div class="songtime"></div>
+            </div>
           </div>
           <div class="seekbar">
             <div class="circle"></div>
