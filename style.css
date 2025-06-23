@@ -223,7 +223,7 @@ body {
 .playbar {
   position: sticky;
   bottom: 10px;
-  background-color: #3a5e47;
+  background-color: #282828;
   padding: 10px;
   border-radius: 10px;
   width: calc(100% - 20px);
@@ -321,6 +321,9 @@ body {
 .songinfo,
 .songtime {
   font-size: 20px;
+}
+.songinfo{
+    width: 290px;
 }
 .timevolume {
   display: flex;
